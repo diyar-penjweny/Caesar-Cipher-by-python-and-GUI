@@ -20,9 +20,9 @@ print ("""
 sleep(1)
 
 
-import tkinter as tk
-from tkinter import ttk
-from tkinter import messagebox
+import tkinter as tk        #for GUI in python
+from tkinter import ttk     #subclass of tkinter
+from tkinter import messagebox    #subclass of tkinter
 
 
 # Function to encrypt text using Caesar Cipher بۆ ئینکریپتکردنی نوسینەکە
