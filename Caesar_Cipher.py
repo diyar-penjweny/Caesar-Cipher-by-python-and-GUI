@@ -37,7 +37,7 @@ def caesar_cipher(text, shift, mode):
             result += char
     return result;
 
-# Function to handle the encryption/decryption button click  کاتێ کە کلیک لە پرۆسێس ئەکەیت هەڵئەستێ بە تیست کردنی بۆشاییەکان تاوەکو بە بەتاڵی یان بە داتاتایپی هەڵە پرت نەکردبێتەوە
+# Function to handle the encryption/decryption button click  کاتێ کە کلیک لە پرۆسێس ئەکەیت هەڵئەستێ بە تێست کردنی بۆشاییەکان تاوەکو بە بەتاڵی یان بە داتاتایپی هەڵە پرت نەکردبێتەوە
 def process_text():
     text = text_entry.get("1.0", "end-1c").strip()  # Get text from multi-line input and remove leading/trailing whitespace
     if not text:  #if empty show error ئەگەر بەتاڵبوو ئیرۆری پشان بە
@@ -53,7 +53,7 @@ def process_text():
 
     mode = operation_var.get()
 
-    if mode == "Select Operation": #if user do not choose Encrypte/Decrypt show error message ئەگەر بەکارهێنەر یەکیک لەئینجریپت یان دیکریپت هەڵنەبژارد ئەوا ئیرۆری پشان بە
+    if mode == "Select Operation": #if user do not choose Encrypte/Decrypt show error message ئەگەر بەکارهێنەر یەکێک لەئینکریپت یان دیکریپت هەڵنەبژارد ئەوا ئیرۆری پشان بە
         messagebox.showerror("Input Error", "Please select an operation (Encrypt/Decrypt).")
         return
 
@@ -70,7 +70,7 @@ def clear_fields():
     result_area.delete("1.0", "end")
 
 
-# Create the main window  دروستکردنی پەڕەیەک
+# Create the main window  GUI دروستکردنی پەڕەیەک بۆ 
 root = tk.Tk()
 root.title("Caesar Cipher Tool")
 
@@ -87,7 +87,7 @@ text_label.pack(pady=5)
 text_entry = tk.Text(root, height=5, width=50, font=("Segoe UI", 12), wrap=tk.WORD, bg="#34495E", fg="#ECF0F1", bd=2, relief="solid", highlightthickness=0)
 text_entry.pack(pady=10)
 
-# create shift input field رووستکردنی خانەی شیفت
+# create shift input field درووستکردنی خانەی شیفت
 shift_label = tk.Label(root, text="Enter Shift Value:", font=("Segoe UI", 12), bg="#2C3E50", fg="white")
 shift_label.pack(pady=5)
 shift_entry = tk.Entry(root, width=10, font=("Segoe UI", 12), bg="#34495E", fg="#ECF0F1", bd=2, relief="solid")
